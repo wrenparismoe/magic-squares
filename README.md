@@ -1,6 +1,6 @@
 # Magic Squares
 
-A magic square is an n x n dimensional grid filled with positive integers 1, 2, 3, ... , n<sup>2</sup> so that every cell is distinct and the sum of every row, column, and diagonal is equivalent. This lab studies some of the underlying mathematical theory behind magic squares. The algorithms take a combinatoric approach by thinking of the problem through permutations. Several variations of the brute force algorithm were implemented to attempt at producing the largest scale of magic squares possible. This would prove to be an increasingly difficult problem. Time complexities are calculated to illustrate the difficulty of producing magic squares. 
+A magic square is an n x n dimensional grid filled with positive integers 1, 2, 3, ... , n<sup>2</sup> so that every cell is distinct and the sum of every row, column, and diagonal is equivalent. This lab studies some of the underlying mathematical theory behind magic squares. The algorithms take a combinatoric approach by thinking of the problem through permutations. Several variations of the brute force algorithm were implemented to attempt at producing the largest scale of magic squares possible. This would prove to be an increasingly difficult problem. Time complexities are calculated to illustrate the difficulty of producing magic squares. Additionally, the number of recursive calls are recorded in order to analyze the efficiency of each algorithm
 
 Defintions:
 - **n-set:** A set with cardinality n. n<sup>2</sup>-sets are used in the context of magic squares since there are n x n cells in the grid.
@@ -59,10 +59,26 @@ Magic Squares: 7040 \
 Elapsed Time: 463701448900 \
 Recursive Calls: 62918610
 
-**Adapted Algorithm #3:** Using the MagicSquare class and narrowRows method, all r-combinations of the n<sup>2</sup>-set with the magic sum are computed. Each r-combination is permuted to find all r-permutations to be used as rows. Finally, all possible magic square arrangements are built and tested.
+**Adapted Algorithm #3:** Using the MagicSquare class and narrowRows method, all r-combinations of the n<sup>2</sup>-set with the magic sum are computed. Each r-combination is permuted to find all r-permutations to be used as rows. Finally, all possible magic square arrangements are built and tested. (Works for 4 x 4 magic squares)
+
+3 x 3: \
+Total Combinations: 8 \
+Total Permutations: 48 \
+Magic Squares: 8 \
+Elapsed Time: 13724000 \
+Recursive Calls: 705
+
+4 x 4: \
+Total Combinations: 86 \
+Total Permutations: 2064 \
+Magic Squares: 7040 \
+Elapsed Time: 464547829500 \
+Recursive Calls: 62879283
 
 Note: Additional algorithms included not in lab report.
 
 ## Breif Analysis
 
-One would assume that the second addition of the brute force algorithm would improve upon the first. However, this was incorrect. The second algorithm requires two similarly looking recursive methods meaning there are many more recursive calls needed in order for the algorithm to complete.
+- all comes down to how many recursive calls are required
+- there was an improvement for 3 x 3 from AA2 to AA3 but not for 4 x 4. The vast majority of the algorithm is taken building the squares which means there is varibality. ----- need to time just permuting vs combinations
+
