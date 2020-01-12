@@ -13,7 +13,7 @@ Defintions:
 The implementation for each algorithm is easy. First, download the python or java file and change the package name at the top of the program. Second, change the global int n at the top of the class to the wanted magic square dimensions.
 
 ## Programs
-### Brute Force Alorithms
+### Brute Force Alorithms )
 **1. Brute Force #1:** Recursively computes all permutations of the n<sup>2</sup>-set fitting each into an n x n square to test for magic square properties. (Only works for 3 x 3 magic squares) 
 
 3 x 3: \
