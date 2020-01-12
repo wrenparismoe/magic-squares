@@ -80,7 +80,5 @@ Recursive Calls: 62879283
 
 ## Brief Analysis
 
-- all comes down to how many recursive calls are required
-- there was an improvement for 3 x 3 from AA2 to AA3 but not for 4 x 4. The vast majority of the algorithm is taken building the squares which means there is varibality. ----- need to time just permuting vs combinations
------ This is shown by the small change in recursive calls since the limiting factor is still the buildSquares method
+The effectiveness of each algorithm is determined by the number of recursive calls that are required to complete the program. For every approach, the time to find 3 x 3 magic squares was completely dependent on how many times each method called itself. It was simple. If more calls occured then the algorithm would have a longer runtime. The only program that disobeyed that trend was the final implementation of the adapted algorithm when tasked with finding all 4 x 4 magic squares. The algorithm took less calls than its predecessor but relatively the difference was small. The vast majority of time taken by the algorithm was taken by the buildSquares algorithm which the improvement did not affect. The variability in the equivalent buildSquares method is what led to a discontinuity in trend. However, the time to find all possible rows for a magic square is faster for the third adapted algorithm.
 
