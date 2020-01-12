@@ -78,8 +78,6 @@ Magic Squares: 7040 \
 Elapsed Time: 464547829500 \
 Recursive Calls: 62879283
 
-Note: Additional algorithms included not in lab report.
-
 ## Brief Analysis
 
 - all comes down to how many recursive calls are required
