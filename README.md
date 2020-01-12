@@ -84,4 +84,5 @@ Note: Additional algorithms included not in lab report.
 
 - all comes down to how many recursive calls are required
 - there was an improvement for 3 x 3 from AA2 to AA3 but not for 4 x 4. The vast majority of the algorithm is taken building the squares which means there is varibality. ----- need to time just permuting vs combinations
+----- This is shown by the small change in recursive calls since the limiting factor is still the buildSquares method
 
