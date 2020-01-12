@@ -1,18 +1,19 @@
 # Magic Squares
 
-A magic square is an n x n dimensional grid filled with positive integers 1, 2, 3, ... , n<sup>2</sup> so that every cell is distinct and the sum of every row, column, and diagonal is equivalent. This lab studies some of the underlying mathematical theory behind magic squares. The algorithms take a combinatoric approach by thinking of the problem through permutations. Several variations of the brute force algorithm were implemented to attempt at producing the largest scale of magic squares possible. This would prove to be an increasingly difficult problem. Time complexities are calculated to illustrate the difficulty of producing magic squares. Additionally, the number of recursive calls are recorded in order to analyze the efficiency of each algorithm
+A magic square is an n x n dimensional grid filled with positive integers 1, 2, 3,..., n<sup>2</sup> so that every cell is distinct and the sum of every row, column, and diagonal is equivalent. This lab studies some of the underlying mathematical theory behind magic squares. The algorithms take a combinatoric approach by thinking of the problem through permutations. Several variations of the brute force algorithm were implemented to attempt at producing the largest scale of magic squares possible. This would prove to be an increasingly difficult problem. Time complexities are calculated to illustrate the difficulty of producing magic squares. Additionally, the number of recursive calls are recorded in order to analyze the efficiency of each algorithm
 
 Defintions:
-- **n-set:** A set with cardinality n. n<sup>2</sup>-sets are used in the context of magic squares since there are n x n cells in the grid.
+- **n-set:** A set with cardinality n. (n<sup>2</sup>-sets are used in the context of magic squares)
 - **permutation:** An ordered arrangement of the n elements in an n-set.
-- **r-permutation:** An ordered arrangement of r elements of an n-set
+- **r-permutation:** An ordered arrangement of r elements of an n-set.
+- **r-combination:** A non-ordered arrangement of r elements of an n-set.
 
 ## Implementation
 
 The implementation for each algorithm is easy. First, download the python or java file and change the package name at the top of the program. Second, change the global int n at the top of the class to the wanted magic square dimensions.
 
-## Algorithms
-
+## Programs
+### Brute Force Alorithms
 **1. Brute Force #1:** Recursively computes all permutations of the n<sup>2</sup>-set fitting each into an n x n square to test for magic square properties. (Only works for 3 x 3 magic squares) 
 
 3 x 3: \
@@ -36,6 +37,8 @@ Total Permutations: 48 \
 Magic Squares: 8 \
 Elapsed Time: 104913000 \
 Recursive Calls: 22763
+
+### Adapted Algorithms
 
 **4. Adapted Algorithm #1:** All square combinations are built using only r-permutations with the magic sum. During each iteration of the recursive buildSquares method, rows including numbers already existing in the partially built square are removed from the current row list. Once a square is filled it is tested for the magic sum property. (Inefficient for 4 x 4 magic squares)
 
