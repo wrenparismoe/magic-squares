@@ -62,7 +62,7 @@ Magic Squares: 7040 \
 Elapsed Time: 463701448900 \
 Recursive Calls: 62918610
 
-**Adapted Alg #3:** Using the MagicSquare class and narrowRows method, all r-combinations of the n<sup>2</sup>-set with the magic sum are computed. Each r-combination is permuted to find all r-permutations to be used as rows. Finally, all possible magic square arrangements are built and tested. (Works for 4 x 4 magic squares)
+**Adapted Alg #3:** Find all r-combinations of the n<sup>2</sup>-set with the magic sum. Each r-combination is permuted giving the r-permutations to be used as rows. Finally, all potential magic square arrangements are built and tested using the MagicSquare class and narrowRows method. (Works for 4 x 4 magic squares)
 
 3 x 3: \
 Total Combinations: 8 \
@@ -80,7 +80,7 @@ Recursive Calls: 62879283
 
 Note: Additional algorithms included not in lab report.
 
-## Breif Analysis
+## Brief Analysis
 
 - all comes down to how many recursive calls are required
 - there was an improvement for 3 x 3 from AA2 to AA3 but not for 4 x 4. The vast majority of the algorithm is taken building the squares which means there is varibality. ----- need to time just permuting vs combinations
