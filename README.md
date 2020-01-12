@@ -13,7 +13,7 @@ Defintions:
 The implementation for each algorithm is easy. First, download the python or java file and change the package name at the top of the program. Second, change the global int n at the top of the class to the wanted magic square dimensions.
 
 ## Programs
-### Brute Force Alorithms )
+### Brute Force Alorithms
 **1. Brute Force #1:** Recursively computes all permutations of the n<sup>2</sup>-set fitting each into an n x n square to test for magic square properties. (Only works for 3 x 3 magic squares) 
 
 3 x 3: \
@@ -22,7 +22,7 @@ Magic Squares: 8 \
 Elapsed Time: 477738600 \
 Recursive Calls: 986410
 
-**2. Brute Force #2:** Using two recursive methods, all r-permutations of the n<sup>2</sup>-set are computed. Every combination of r-permutations is found and tested in the buildSquares method to determine if a magic square is formed. (Only works for 3 x 3 magic squares)
+**2. Brute Force #2:** Using two recursive methods, all r-permutations of the n<sup>2</sup>-set are computed. Every arrangement of r-permutations is found and tested in the buildSquares method to determine if a magic square is formed. (Only works for 3 x 3 magic squares)
 
 3 x 3: \
 Total Permutations: 504 \
@@ -40,7 +40,7 @@ Recursive Calls: 22763
 
 ### Adapted Algorithms
 
-**4. Adapted Algorithm #1:** All square combinations are built using only r-permutations with the magic sum. During each iteration of the recursive buildSquares method, rows including numbers already existing in the partially built square are removed from the current row list. Once a square is filled it is tested for the magic sum property. (Inefficient for 4 x 4 magic squares)
+**4. Adapted Alg #1:** Each square arrangement is built using r-permutations with the magic sum. During each iteration of the recursive buildSquares method, rows with numbers already used in a partially built square are removed from the current row list. Once a square is filled it is tested for the magic sum property. (Inefficient for 4 x 4 magic squares)
 
 3 x 3: \
 Total Permutations: 48 \
@@ -48,7 +48,7 @@ Magic Squares: 8 \
 Elapsed Time: 53517500 \
 Recursive Calls: 3659
 
-**5. Adapted Algorithm #2:** Using the MagicSquare object class, partial column sums are updated as rows are added to the magic square. Remaining column sums are computed by subtracting partial sums from the magic sum. The narrowRows method is used to remove r-permutations containing the numbers already included in the square or numbers greater than the remaining sum. (Works for 4 x 4 magic squares)
+**5. Adapted Alg #2:** Using the MagicSquare object class, partial column sums are updated as rows are added to the magic square. Remaining column sums are computed by subtracting partial sums from the magic sum. The narrowRows method is used to remove r-permutations containing the numbers already included in the square or numbers greater than the remaining sum. (Works for 4 x 4 magic squares)
 
 3 x 3: \
 Total Permutations: 48 \
@@ -62,7 +62,7 @@ Magic Squares: 7040 \
 Elapsed Time: 463701448900 \
 Recursive Calls: 62918610
 
-**Adapted Algorithm #3:** Using the MagicSquare class and narrowRows method, all r-combinations of the n<sup>2</sup>-set with the magic sum are computed. Each r-combination is permuted to find all r-permutations to be used as rows. Finally, all possible magic square arrangements are built and tested. (Works for 4 x 4 magic squares)
+**Adapted Alg #3:** Using the MagicSquare class and narrowRows method, all r-combinations of the n<sup>2</sup>-set with the magic sum are computed. Each r-combination is permuted to find all r-permutations to be used as rows. Finally, all possible magic square arrangements are built and tested. (Works for 4 x 4 magic squares)
 
 3 x 3: \
 Total Combinations: 8 \
